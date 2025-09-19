@@ -1,127 +1,218 @@
-# Proyecto: Plataforma de Gestión y Venta de Entradas para Eventos
+# Flow Entertainment 🎵
 
-## 1. Resumen del Proyecto
+**La plataforma definitiva para eventos y fiestas con DJ**
 
-Crear una plataforma integral (web y móvil) para la promoción, venta y gestión de entradas a eventos. El sistema se diferenciará por su experiencia de usuario inmersiva, potentes herramientas de gestión para organizadores y una app ágil para agentes de ventas y clientes.
+Flow Entertainment es una plataforma web completa diseñada para revolucionar la forma en que se promocionan, venden y gestionan las entradas a eventos musicales. Con un enfoque especial en fiestas con DJs, ofrece una experiencia única tanto para organizadores como para clientes y agentes de venta.
 
-**Principales Actores:**
-*   **Administrador/Organizador:** Gestiona eventos, locales y agentes desde la plataforma web.
-*   **Agente de Ventas:** Vende entradas y gestiona clientes desde la aplicación móvil.
-*   **Cliente Final:** Compra entradas, explora eventos y accede a sus QR desde la app.
+## 🌟 Características Principales
+
+### Para Organizadores
+- **Panel de Administración Completo**: Gestión integral de eventos, agentes y analíticas
+- **Diseñador de Locales Interactivo**: Herramienta visual para crear mapas 3D de venues
+- **Gestión de Agentes**: Sistema de comisiones y rankings para equipos de venta
+- **Analíticas en Tiempo Real**: Métricas detalladas de ventas y rendimiento
+
+### Para Clientes
+- **Experiencia Visual Inmersiva**: Mapas interactivos para seleccionar asientos
+- **Compra Simplificada**: Proceso de checkout optimizado con múltiples opciones
+- **Entradas Digitales**: Códigos QR seguros para acceso sin contacto
+- **Productos Adicionales**: Packs de bebidas, merchandising y experiencias VIP
+
+### Para Agentes de Venta
+- **Dashboard Personalizado**: Métricas de rendimiento y objetivos
+- **Herramientas de Venta**: Generación de enlaces de invitación y QR
+- **Sistema de Gamificación**: Rankings y recompensas por rendimiento
+- **Gestión de Clientes**: Base de datos de clientes frecuentes
+
+## 🚀 Tecnologías Utilizadas
+
+- **Frontend**: React 18 + Vite
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Iconos**: Lucide React
+- **Animaciones**: Framer Motion
+- **Routing**: React Router DOM
+- **Build Tool**: Vite
+
+## 📁 Estructura del Proyecto
+
+```
+flow-entertainment/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── components/
+│   │   ├── ui/              # Componentes base de shadcn/ui
+│   │   ├── AdminPanel.jsx   # Panel de administración
+│   │   ├── VenueDesigner.jsx # Diseñador de locales
+│   │   ├── EventPage.jsx    # Página individual de evento
+│   │   └── AgentDashboard.jsx # Panel de agentes
+│   ├── App.jsx              # Componente principal y routing
+│   ├── App.css              # Estilos globales
+│   └── main.jsx             # Punto de entrada
+├── package.json
+└── README.md
+```
+
+## 🎨 Páginas y Funcionalidades
+
+### 1. Página Principal (`/`)
+- **Hero Section**: Video de fondo con llamadas a la acción
+- **Eventos Destacados**: Grid de próximos eventos
+- **Cómo Funciona**: Proceso paso a paso
+- **Características**: Funcionalidades únicas de la plataforma
+- **Descarga de App**: Enlaces a tiendas móviles
+
+### 2. Panel de Administración (`/admin`)
+- **Dashboard**: Métricas generales y KPIs
+- **Gestión de Eventos**: CRUD completo de eventos
+- **Gestión de Agentes**: Control de equipos de venta
+- **Analíticas**: Gráficos y reportes detallados
+- **Configuración**: Ajustes de la plataforma
+
+### 3. Diseñador de Locales (`/venue-designer`)
+- **Herramientas de Diseño**: Mesas, barras, cabinas DJ, zonas VIP
+- **Canvas Interactivo**: Arrastrar y soltar elementos
+- **Propiedades Configurables**: Precios, capacidad, etiquetas
+- **Vista 2D/3D**: Múltiples perspectivas del local
+- **Exportación**: Guardar diseños para eventos
+
+### 4. Página de Evento (`/event/:id`)
+- **Información Detallada**: Descripción, DJ, horarios
+- **Mapa Interactivo**: Selección visual de asientos
+- **Productos Adicionales**: Bebidas, merchandising
+- **Proceso de Compra**: Checkout integrado
+- **Generación de QR**: Entradas digitales instantáneas
+
+### 5. Panel de Agentes (`/agent`)
+- **Métricas Personales**: Ventas, comisiones, ranking
+- **Eventos Disponibles**: Catálogo para venta
+- **Herramientas de Venta**: Enlaces de invitación, QR
+- **Clientes VIP**: Base de datos de clientes frecuentes
+- **Ranking Global**: Competencia entre agentes
+
+## 🎯 Flujos de Usuario
+
+### Flujo de Compra del Cliente
+1. **Descubrimiento**: Navegación por eventos en la página principal
+2. **Selección**: Click en evento de interés
+3. **Exploración**: Visualización del local y opciones disponibles
+4. **Personalización**: Selección de asientos y productos adicionales
+5. **Compra**: Proceso de checkout simplificado
+6. **Confirmación**: Recepción de QR para acceso al evento
+
+### Flujo de Venta del Agente
+1. **Login**: Acceso al panel personalizado
+2. **Selección de Evento**: Elección del evento a promocionar
+3. **Generación de Enlace**: Creación de link personalizado
+4. **Promoción**: Envío por WhatsApp, email o redes sociales
+5. **Seguimiento**: Monitoreo de conversiones y comisiones
+
+### Flujo de Gestión del Organizador
+1. **Creación de Evento**: Información básica y detalles
+2. **Diseño del Local**: Uso del diseñador interactivo
+3. **Configuración de Precios**: Establecimiento de tarifas por zona
+4. **Gestión de Agentes**: Asignación de equipos de venta
+5. **Monitoreo**: Seguimiento de ventas y analíticas
+
+## 🎨 Diseño y UX
+
+### Paleta de Colores
+- **Primario**: Gradientes púrpura a rosa (#8B5CF6 → #EC4899)
+- **Secundario**: Cian y amarillo para acentos (#06B6D4, #F59E0B)
+- **Fondo**: Gradientes oscuros (#1E1B4B → #0F172A)
+- **Texto**: Blanco y grises para contraste óptimo
+
+### Principios de Diseño
+- **Tema Nocturno**: Colores oscuros que evocan la vida nocturna
+- **Gradientes Vibrantes**: Efectos visuales que transmiten energía
+- **Animaciones Fluidas**: Transiciones suaves con Framer Motion
+- **Tipografía Moderna**: Jerarquía clara y legibilidad óptima
+- **Responsive Design**: Adaptación perfecta a todos los dispositivos
+
+## 🚀 Instalación y Desarrollo
+
+### Prerrequisitos
+- Node.js 18+ 
+- npm o pnpm
+
+### Instalación
+```bash
+# Clonar el repositorio
+git clone [repository-url]
+cd flow-entertainment
+
+# Instalar dependencias
+npm install
+# o
+pnpm install
+
+# Iniciar servidor de desarrollo
+npm run dev
+# o
+pnpm dev
+```
+
+### Scripts Disponibles
+```bash
+npm run dev      # Servidor de desarrollo
+npm run build    # Build de producción
+npm run preview  # Preview del build
+npm run lint     # Linting del código
+```
+
+## 🌐 Despliegue
+
+El proyecto está optimizado para despliegue en:
+- **Vercel** (recomendado para React)
+- **Netlify**
+- **AWS S3 + CloudFront**
+- **GitHub Pages**
+
+### Build de Producción
+```bash
+npm run build
+```
+
+Los archivos optimizados se generan en la carpeta `dist/`.
+
+## 🔮 Roadmap Futuro
+
+### Funcionalidades Planificadas
+- **App Móvil**: Versión nativa para iOS y Android
+- **Pagos Integrados**: Stripe, PayPal, criptomonedas
+- **Realidad Aumentada**: Vista AR del local desde el móvil
+- **IA Personalizada**: Recomendaciones basadas en gustos musicales
+- **Streaming en Vivo**: Transmisión de eventos en tiempo real
+- **NFT Tickets**: Entradas como tokens no fungibles
+
+### Integraciones
+- **WhatsApp Business API**: Envío automático de entradas
+- **Telegram Bot**: Notificaciones y soporte al cliente
+- **Spotify/Apple Music**: Integración con playlists de DJs
+- **Google Maps**: Navegación al venue
+- **Uber/Cabify**: Transporte integrado
+
+## 🤝 Contribución
+
+Este proyecto está diseñado como una demostración completa de una plataforma de eventos. Para contribuir:
+
+1. Fork del repositorio
+2. Crear rama de feature (`git checkout -b feature/nueva-funcionalidad`)
+3. Commit de cambios (`git commit -m 'Agregar nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Crear Pull Request
+
+## 📄 Licencia
+
+Este proyecto es una demostración y está disponible bajo licencia MIT.
+
+## 🎵 Créditos
+
+- **Diseño**: Inspirado en las mejores prácticas de UX para plataformas de entretenimiento
+- **Imágenes**: Pexels y Unsplash para contenido de demostración
+- **Videos**: Mixkit para videos de fondo
+- **Iconos**: Lucide React para iconografía consistente
 
 ---
 
-## 2. Arquitectura Tecnológica (Stack Propuesto)
-
-### **Backend (Microservicios)**
-*   **Framework:** Node.js con **NestJS** (altamente recomendado por su arquitectura modular, similar a Angular) o Python con **FastAPI**.
-*   **Servicios Propuestos:**
-    *   `servicio-usuarios`: Autenticación (JWT), perfiles, roles (admin, agente, cliente).
-    *   `servicio-eventos`: CRUD de eventos, gestión de fechas, políticas de precios.
-    *   `servicio-locales`: Gestión de mapas de locales (mesas, zonas, barras).
-    *   `servicio-ventas`: Lógica de negocio para crear, procesar y confirmar ventas.
-    *   `servicio-pagos`: Integración con pasarelas de pago (Stripe, Mercado Pago).
-    *   `servicio-notificaciones`: Envío de emails, notificaciones push y generación/envío de QR.
-
-### **Bases de Datos**
-*   **Datos Relacionales:** **PostgreSQL**. Ideal para usuarios, eventos, ventas, transacciones. Es robusto y escalable.
-*   **Datos No Relacionales:** **MongoDB**. Perfecto para almacenar la estructura de los mapas de los locales (JSON flexible con posiciones x, y, tipo de objeto, etc.).
-
-### **Frontend**
-*   **Plataforma Web (Admin/Organizador):** **React** o **Vue.js**.
-    *   Librería de componentes: Material-UI (para React) o Vuetify (para Vue).
-    *   Librería para el diseñador de locales: `react-dnd` (drag and drop) o `konva`.
-*   **Aplicación Móvil (Agente/Cliente):** **Flutter** o **React Native**.
-    *   Permite un único código base para iOS y Android, optimizando recursos.
-
----
-
-## 3. Plan de Desarrollo por Fases y Funcionalidades
-
-### **Fase 1: El Núcleo del Sistema (Backend y Base de Datos)**
-
-#### **Paso 1.1: Configuración de la Base de Datos**
-*   **Tarea:** Diseñar y crear los esquemas para PostgreSQL.
-    *   `users` (id, nombre, email, password_hash, role).
-    *   `events` (id, nombre, fecha, lugar, descripcion, organizador_id).
-    *   `sales` (id, event_id, user_id, agent_id, total_amount, status).
-    *   `tickets` (id, sale_id, seat_info, qr_code_hash).
-*   **Tarea:** Configurar la base de datos MongoDB.
-    *   Crear una colección `venue_maps` para guardar los diseños de los locales en formato JSON.
-
-#### **Paso 1.2: Microservicio de Usuarios y Autenticación**
-*   **Tarea:** Implementar endpoints para registro, login y gestión de perfiles.
-*   **Tarea:** Implementar sistema de autenticación basado en **JWT (JSON Web Tokens)**.
-*   **Tarea:** Definir roles (`admin`, `agent`, `client`) y proteger rutas según el rol.
-
-#### **Paso 1.3: Microservicio de Eventos**
-*   **Tarea:** Crear endpoints CRUD (Crear, Leer, Actualizar, Borrar) para los eventos.
-*   **Tarea:** El endpoint de creación debe asociar el evento a un organizador (user_id).
-
----
-
-### **Fase 2: Plataforma Web de Administración**
-
-#### **Paso 2.1: Dashboard Principal del Organizador**
-*   **Tarea:** Crear la interfaz para listar, crear y editar eventos.
-*   **Tarea:** Conectar la interfaz con el `servicio-eventos`.
-
-#### **Paso 2.2: Diseñador de Locales (Funcionalidad Estrella)**
-*   **Tarea:** Desarrollar un componente visual de "arrastrar y soltar" (drag-and-drop).
-*   **Tarea:** Permitir al organizador añadir elementos: mesas (circulares, cuadradas), zonas VIP, pista de baile, DJ, barras.
-*   **Tarea:** Cada elemento debe ser configurable (ej. número de mesa, capacidad, precio).
-*   **Tarea:** Al guardar, la configuración se envía como un objeto JSON al `servicio-locales` y se almacena en MongoDB.
-
-#### **Paso 2.3: Gestión de Agentes y Analíticas**
-*   **Tarea:** Crear interfaz para invitar/añadir agentes de ventas a la plataforma.
-*   **Tarea:** Asignar agentes a eventos específicos.
-*   **Tarea:** Desarrollar un panel de analíticas con gráficos (ej. usando Chart.js) para visualizar ventas en tiempo real, ingresos por evento y rendimiento de agentes.
-
----
-
-### **Fase 3: Aplicación Móvil (Modo Agente y Cliente)**
-
-#### **Paso 3.1: Configuración Inicial y Autenticación**
-*   **Tarea:** Estructurar la app en Flutter/React Native con navegación.
-*   **Tarea:** Implementar las pantallas de login/registro que se comunican con el `servicio-usuarios`.
-*   **Tarea:** La app debe cambiar su interfaz según el rol del usuario logueado (Agente o Cliente).
-
-#### **Paso 3.2: Modo Agente de Ventas**
-*   **Tarea:** Pantalla principal con la lista de eventos asignados.
-*   **Tarea:** Al seleccionar un evento, mostrar el mapa del local renderizando el JSON de MongoDB. Las mesas/zonas deben ser interactivas y mostrar su estado (libre, reservada, vendida).
-*   **Tarea:** Implementar el flujo de venta:
-    1.  Agente selecciona una mesa/entrada.
-    2.  La app se comunica con el `servicio-ventas` para crear una "pre-reserva".
-    3.  Generar un **enlace de pago** (usando el `servicio-pagos`) o permitir al agente marcarla como "pagada en efectivo".
-    4.  Una vez confirmado el pago, el `servicio-notificaciones` genera el QR.
-*   **Tarea:** Implementar la función de compartir el QR por WhatsApp, email, etc.
-*   **Tarea:** Implementar la creación de "enlaces de invitación" que filtren la vista del mapa para un cliente específico.
-
-#### **Paso 3.3: Modo Cliente Final**
-*   **Tarea:** Pantalla de exploración de eventos (con filtros por ciudad, fecha).
-*   **Tarea:** Visualizador del mapa del local, permitiendo al cliente seleccionar su lugar.
-*   **Tarea:** Flujo de compra autónomo:
-    1.  Cliente selecciona mesa/entrada.
-    2.  Añade productos opcionales (bebidas, merchandising).
-    3.  Procede al checkout e introduce sus datos de pago en la pasarela.
-*   **Tarea:** Crear la sección "Mis Entradas", una billetera digital que muestra los QR de las compras activas.
-
----
-
-### **Fase 4: Funcionalidades Innovadoras y Pulido Final**
-
-#### **Paso 4.1: Mejoras en la Experiencia de Usuario**
-*   **Tarea:** (Opcional, Avanzado) Investigar librerías como `three.js` para renderizar el mapa del local en **3D** en la app del cliente.
-*   **Tarea:** Implementar un sistema de notificaciones push para recordar eventos o anunciar novedades.
-
-#### **Paso 4.2: Gamificación y Funciones Sociales**
-*   **Tarea:** En el backend, crear lógica para calcular rankings de agentes (ventas totales, velocidad de venta).
-*   **Tarea:** Mostrar medallas y tablas de clasificación en el "Modo Agente" de la app.
-*   **Tarea:** Implementar la compra anticipada de bebidas, generando un QR adicional para canjear en barra.
-
-#### **Paso 4.3: Despliegue y Pruebas**
-*   **Tarea:** Contenerizar los microservicios usando **Docker**.
-*   **Tarea:** Orquestar los contenedores con **Kubernetes** o usar un servicio gestionado como AWS Fargate, Google Cloud Run o DigitalOcean App Platform.
-*   **Tarea:** Configurar un pipeline de CI/CD (Integración Continua/Despliegue Continuo) con herramientas como GitHub Actions.
-*   **Tarea:** Publicar la aplicación móvil en la App Store y Google Play.
-
+**Flow Entertainment** - *Donde la música cobra vida* 🎶✨
