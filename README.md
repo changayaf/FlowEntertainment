@@ -4,6 +4,8 @@
 
 Flow Entertainment es una plataforma web completa diseñada para revolucionar la forma en que se promocionan, venden y gestionan las entradas a eventos musicales. Con un enfoque especial en fiestas con DJs, ofrece una experiencia única tanto para organizadores como para clientes y agentes de venta.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/changayaf/FlowEntertainment)
+
 ## 🌟 Características Principales
 
 ### Para Organizadores
@@ -24,10 +26,87 @@ Flow Entertainment es una plataforma web completa diseñada para revolucionar la
 - **Sistema de Gamificación**: Rankings y recompensas por rendimiento
 - **Gestión de Clientes**: Base de datos de clientes frecuentes
 
-## 🚀 Tecnologías Utilizadas
+## 🚀 Stack Tecnológico
 
-- **Frontend**: React 18 + Vite
-- **Styling**: Tailwind CSS + shadcn/ui
+### Frontend
+- **React 19** con Vite para desarrollo rápido
+- **Tailwind CSS** + **shadcn/ui** para diseño moderno
+- **Framer Motion** para animaciones fluidas
+- **React Router** para navegación SPA
+
+### Backend & Base de Datos
+- **Supabase** (PostgreSQL + Auth + Storage)
+- **Row Level Security (RLS)** para seguridad granular
+- **Real-time subscriptions** para actualizaciones en vivo
+
+### Deployment & DevOps
+- **Vercel** para hosting y CI/CD
+- **GitHub** para control de versiones
+- **PNPM** para gestión de dependencias
+
+## 🛠️ Instalación y Desarrollo
+
+### Prerrequisitos
+
+- Node.js 18+ 
+- PNPM (recomendado) o NPM
+- Cuenta en Supabase
+- Cuenta en Vercel (para despliegue)
+
+### Configuración Local
+
+1. **Clona el repositorio**
+```bash
+git clone https://github.com/changayaf/FlowEntertainment.git
+cd FlowEntertainment
+```
+
+2. **Instala dependencias**
+```bash
+pnpm install
+```
+
+3. **Configura variables de entorno**
+```bash
+# Copia el archivo de ejemplo
+cp .env.example .env.local
+
+# Edita .env.local con tus credenciales de Supabase
+VITE_SUPABASE_URL=tu-url-de-supabase
+VITE_SUPABASE_ANON_KEY=tu-clave-publica
+```
+
+4. **Inicia el servidor de desarrollo**
+```bash
+pnpm dev
+```
+
+5. **Visita la aplicación**
+```
+http://localhost:5173
+```
+
+## 🚀 Despliegue en Producción
+
+Para desplegar tu aplicación en Vercel con Supabase, sigue la **[Guía de Despliegue Completa](./DEPLOY_GUIDE.md)**.
+
+### Despliegue Rápido
+
+1. **Conecta con Vercel**
+   - Haz fork del repositorio
+   - Conecta tu repositorio con Vercel
+   - Configura las variables de entorno
+
+2. **Configura Supabase**
+   - Crea un proyecto en Supabase
+   - Ejecuta el script `database-schema.sql`
+   - Configura las URLs de autenticación
+
+3. **Deploy automático**
+   - Cada push a `main` despliega automáticamente
+   - Revisa los logs en Vercel Dashboard
+
+## 📊 Arquitectura de la Base de Datos
 - **Iconos**: Lucide React
 - **Animaciones**: Framer Motion
 - **Routing**: React Router DOM
